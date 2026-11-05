@@ -44,15 +44,27 @@ void initializeArray(float arr[], int n)
 int main()
 {
     time_t t;
-    srand((unsigned)(&t));
+    srand((unsigned)time(&t));
 
     float arr[10];
     int k[] = {100, 1000};
+    int comp = 0;
+
     for(int i = 0; i < 2; i++)
     {
+        int freq[11] ={0};
         for(int j = 0; j < k[i]; j++)
         {
-
+            initializeArray(arr, 10);
+            minIndex(arr, 10, &comp);
+            freq[comp]++;
+        }
+        printf("k = %d\n", k[i]);
+        printf("Comparison table\n");
+        printf("comps   |  frequency\n");
+        for(int i = 1; i < 11; i++)
+        {
+            printf("%4d  |  %9d\n", i, freq[i]);
         }
     }
 

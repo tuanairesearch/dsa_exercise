@@ -51,7 +51,7 @@ int main()
 {
     // choose random seed
     time_t t;
-    srand((unsigned)(&t));
+    srand((unsigned)time(&t));
 
     int k[] = {100, 1000, 10000};
     int min = -1000, max = 1000;
