@@ -1,0 +1,23 @@
+# ===========================================
+#  .gitignore cho repo DSA chỉ code C
+#  Cách làm: bỏ qua TẤT CẢ, rồi chỉ giữ lại
+#  những file mình tự viết (whitelist)
+# ===========================================
+
+# 1) Bỏ qua mọi thứ
+*
+
+# 2) Nhưng vẫn cho Git đi vào các thư mục con
+!*/
+
+# 3) Giữ lại code C và header
+!*.c
+!*.h
+
+# 4) Giữ lại file ghi chú / cấu hình repo
+!*.md
+!.gitignore
+!Makefile
+
+# (Tuỳ chọn) Muốn lưu file input test thì bỏ dấu # ở dòng dưới
+# !*.txt
